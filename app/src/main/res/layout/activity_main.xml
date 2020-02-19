@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etRunnableInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter String to be Reversed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnReverseStringThroughRunnable"/>
+
+    <Button
+        android:id="@+id/btnReverseStringThroughRunnable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reverse String Through Runnable"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@+id/etRunnableInput"/>
+
+    <TextView
+        android:id="@+id/tvReversedString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnReverseStringThroughRunnable"/>
+
+    <EditText
+        android:id="@+id/etFirstInteger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter First Integer"
+        app:layout_constraintTop_toBottomOf="@+id/tvReversedString"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/etSecondInteger"/>
+
+    <EditText
+        android:id="@+id/etSecondInteger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Second Integer"
+        app:layout_constraintTop_toBottomOf="@+id/tvReversedString"
+        app:layout_constraintStart_toEndOf="@+id/etFirstInteger"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnAsyncTaskFindPrime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find the Prime Numbers"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstInteger"
+        app:layout_constraintBottom_toTopOf="@+id/tvPrimeNumbers"/>
+
+    <TextView
+        android:id="@+id/tvPrimeNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnAsyncTaskFindPrime"/>
+
+    <Button
+        android:id="@+id/btnFibonacci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate Fibonacci of the 20th iteration"
+        android:onClick="onClick"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrimeNumbers"
+        app:layout_constraintBottom_toTopOf="@+id/tvFibonacciOutput"/>
+
+    <TextView
+        android:id="@+id/tvFibonacciOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnFibonacci"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
